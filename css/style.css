@@ -1,0 +1,691 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.title {
+    padding-bottom: 40px;
+}
+
+.title h3 {
+    color: #fff;
+    position: relative;
+    font-weight: 300;
+    font-size: 28px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.title h3::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    width: 60px;
+    background: #2fbf71;
+    height: 1px;
+}
+
+.title h3::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -12px;
+    left: 56px;
+    right: 0;
+    z-index: -1;
+    background: #2fbf71;
+}
+
+.title p {
+    padding-top: 40px;
+    width: 600px;
+    line-height: 26px;
+}
+
+body {
+    font-size: 15px;
+    color: #f1f1f1cc;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    background-color: #10101A;
+}
+
+::selection {
+    background-color: #2FBF71;
+    color: #fff;
+}
+
+.ripple {
+    border-radius: 50%;
+    position: relative;
+    animation: ripple 3s linear infinite;
+}
+
+.ripple::before, .ripple::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    animation: inherit;
+    animation-delay: 1s;
+}
+
+.ripple::after {
+    animation-delay: 2s;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0rem rgba(117, 117, 148, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 4rem rgba(117, 117, 148, 0);
+    }
+}
+
+/* FFC837 */
+
+/* navbar part start */
+
+nav {
+    width: 280px;
+    height: 100%;
+    background-color: #0C0C14;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    z-index: 999;
+    overflow: hidden;
+    transition: all linear .4s;
+}
+
+nav .logo {
+    padding-top: 65px;
+}
+
+nav .logo h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-top: 25px;
+}
+
+nav .logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: inline-block;
+}
+
+nav .logo::after {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: -180px;
+    left: -35px;
+    background-color: #2FBF71;
+    content: "";
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+
+nav .navbar-main {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .navbar-main li {
+    padding: 13px 0;
+}
+
+nav .navbar-main li a {
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all linear .3s;
+}
+
+nav .navbar-main li a:hover {
+    color: #2FBF71;
+}
+
+nav .navbar-main li a i {
+    width: 30px;
+    font-size: 16px;
+}
+
+nav .side-nav {
+    height: 100%;
+}
+
+nav .navbar-main li a.active {
+    color: #2FBF71;
+}
+
+nav .social-icon {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+}
+
+nav .social-icon ul li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+nav .social-icon ul li a {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all linear .1s;
+}
+
+nav .social-icon ul li a:hover {
+    color: #2FBF71;
+}
+
+.nav-link {
+    padding: 0;
+}
+
+.open-bars {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 99;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.open-bars span {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.show-menu {
+    left: 0;
+}
+
+/* navbar part end */
+
+/* banner part start */
+
+#banner {
+    padding: 146px 0;
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+#banner h1 {
+    font-size: 65px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 5px 0 10px 0;
+    letter-spacing: 5px;
+}
+
+#banner h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    padding: 5px 0 10px 0;
+}
+
+#banner p {
+    max-width: 450px;
+    font-size: 18px;
+}
+
+#banner .button {
+    padding-top: 30px;
+}
+
+#banner .button a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2FBF71;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 40px;
+    position: relative;
+    transition: all linear .3s;
+}
+
+#banner .button a:hover {
+    background-color: #fff;
+    color: #2FBF71;
+}
+
+#banner .button a::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    content: "";
+    background-color: #fff;
+    z-index: -1;
+    transition: all linear .3s;
+}
+
+#banner .button a:hover::before {
+    background-color: #2FBF71;
+}
+
+#pp-nav li .active span, .pp-slidesNav .active span {
+    background: #2FBF71;
+    border-color: red;
+    width: 12px;
+    height: 12px;
+    left: 0;
+}
+
+#pp-nav span, .pp-slidesNav span {
+    width: 8px;
+    height: 8px;
+    transition: all linear .3s;
+    background-color: #535353;
+    border: none;
+}
+
+/* banner part end */
+
+/* about part start */
+
+#about {
+    padding: 190px 0;
+}
+
+#about .image {
+    width: 100%;
+}
+
+#about .text {
+    width: 100%;
+    position: relative;
+}
+
+#about .text::before {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: -70px;
+    top: 0;
+    content: "";
+    border-radius: 10px;
+    animation: change 4s infinite;
+}
+
+@keyframes change {
+    0% {
+        background-color: #2fbf71;
+    }
+    25% {
+        background-color: #9FE9E3;
+    }
+    50% {
+        background-color: #FDC012;
+    }
+    100% {
+        background-color: #A2A0E1;
+    }
+}
+
+#about .text h4 {
+    color: #fff;
+    padding-bottom: 25px;
+    font-size: 28px;
+    padding-right: 30px;
+}
+
+#about .text p {
+    line-height: 26px;
+    padding-right: 36px;
+}
+
+#about .text h5 {
+    color: #fff;
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+
+#about .text ul li {
+    display: inline-block;
+    padding-right: 8px;
+}
+
+#about .text ul li a {
+    width: 40px;
+    height: 40px;
+    background: #313136;
+    color: #FFF;
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 14px 0;
+    margin: 0 3px 0 0;
+    transition: all linear .2s;
+    background-color: #25252a;
+    display: inline-block;
+}
+
+#about .text ul li a:hover {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background-color: #2fbf71;
+}
+
+/* about part end */
+
+/* skills part start */
+
+#skills {
+    padding: 185px 0;
+}
+
+#skills .skills-main {
+    padding-top: 20px;
+}
+
+#skills .progress-details {
+    width: 550px;
+}
+
+#skills .progress-details h4 {
+    letter-spacing: 2px;
+}
+
+#skills .skills-main h2 {
+    padding-bottom: 40px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+}
+
+#skills .skills-main h2 span {
+    width: 35px;
+    height: 35px;
+    background-color: #313136;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    position: absolute;
+    top: -15px;
+    right: -50px;
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    filter: drop-shadow(0 0 1rem #000000);
+}
+
+#skills .details-circle p {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    padding-top: 80px;
+    position: relative;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+#skills .details-circle p::before {
+    width: 60px;
+    height: 2px;
+    background-color: #2fbf71;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border-radius: 10px;
+}
+
+#skills .details-circle p::after {
+    width: 110px;
+    height: 2px;
+    background-color: #404048;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    border-radius: 10px;
+    z-index: -1;
+}
+
+/* skills part end */
+
+/* portfolio part start */
+
+#portfolio .menu {
+    padding-bottom: 20px;
+}
+
+#portfolio .port-main {
+    position: relative;
+}
+
+#portfolio ul li {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 30px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #dbdbdb;
+    transition: all linear .3s;
+    position: relative;
+}
+
+#portfolio ul li.mixitup-control-active {
+    color: #2FBF71;
+}
+
+#portfolio ul {
+    padding-bottom: 15px;
+}
+
+#portfolio ul li:hover {
+    color: #2fbf71;
+}
+
+#portfolio .right {
+    position: absolute;
+    right: 5px;
+    top: -10px;
+}
+
+#portfolio .right li {
+    margin-right: 0;
+}
+
+#portfolio .right a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2FBF71;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    position: relative;
+    transition: all linear .3s;
+}
+
+#portfolio .right a:hover {
+    background-color: #fff;
+    color: #2FBF71;
+}
+
+#portfolio .right a::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    content: "";
+    background-color: #fff;
+    z-index: -1;
+    transition: all linear .3s;
+}
+
+#portfolio .right a:hover::before {
+    background-color: #2FBF71;
+}
+
+#portfolio .images {
+    position: relative;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+#portfolio .images img {
+    transition-duration: 1s;
+}
+
+#portfolio .images .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    content: "";
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+    z-index: 1;
+}
+
+#portfolio .images:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+#portfolio .images:hover img {
+    transform: scale(1.2);
+}
+
+#portfolio .images .title-text {
+    position: absolute;
+    bottom: 20px;
+    left: -80px;
+    transition: all linear .3s;
+    opacity: 0;
+}
+
+#portfolio .images:hover .title-text {
+    left: 20px;
+    opacity: 1;
+}
+
+#portfolio .images .demo {
+    position: absolute;
+    top: 20px;
+    right: -80px;
+    transition: all linear .3s;
+    opacity: 0;
+}
+
+#portfolio .images:hover .demo {
+    right: 20px;
+    opacity: 1;
+}
+
+#portfolio .images a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #2fbf71;
+    background-color: #10101A;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 11px 25px;
+    position: relative;
+    transition: all linear .3s;
+}
+
+#portfolio .images a::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    content: "";
+    border: 1px solid #2fbf71;
+    z-index: -1;
+    transition: all linear .1s;
+}
+
+#portfolio .images p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#portfolio .images p i {
+    padding-right: 10px;
+    color: #2FBF71;
+}
+
+#portfolio .images span {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+/* portfolio part end */
